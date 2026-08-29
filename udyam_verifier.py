@@ -589,7 +589,13 @@ def main():
     invalid_fmt = [i for i in ids if not UDYAM_PATTERN.match(i)]
     print(f"\n📋 {len(ids)} total  →  {len(valid_ids)} valid, {len(invalid_fmt)} invalid format")
 
-    base_path = os.path.splitext(input_file)[0]
+    # Save JSON output to a "json" subfolder next to the input file,
+    # instead of dumping it alongside the input file itself.
+    input_dir  = os.path.dirname(os.path.abspath(input_file)) or "."
+    json_dir   = os.path.join(input_dir, "json_folder")
+    os.makedirs(json_dir, exist_ok=True)
+    base_name  = os.path.splitext(os.path.basename(input_file))[0]
+    base_path  = os.path.join(json_dir, base_name)
 
     print("\n🌐 Launching Chrome...")
     driver = get_driver()
