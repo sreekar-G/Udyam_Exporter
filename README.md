@@ -13,7 +13,7 @@ It's a two-step pipeline:
 ```
 ## Architecture Overview
 
-![Architecture Overview](assets\Architectural_Overview.png)
+![Architecture Overview](assets/Architectural_Overview.png)
 
 ---
 
