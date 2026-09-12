@@ -11,6 +11,9 @@ It's a two-step pipeline:
 (your list)      (browser automation,        (raw results)              (formatted report)
                    manual CAPTCHA solve)
 ```
+## Architecture Overview
+
+![Architecture Overview](assets\Architectural_Overview.png)
 
 ---
 
